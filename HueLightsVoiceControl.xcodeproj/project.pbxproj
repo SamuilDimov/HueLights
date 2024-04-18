@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7AFDDF62BD116D700E7669B /* HueLightsVoiceControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFDDF52BD116D700E7669B /* HueLightsVoiceControlApp.swift */; };
+		A7AFDDF82BD116D700E7669B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFDDF72BD116D700E7669B /* ContentView.swift */; };
+		A7AFDDFA2BD116D800E7669B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7AFDDF92BD116D800E7669B /* Assets.xcassets */; };
+		A7AFDDFD2BD116D800E7669B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7AFDDFC2BD116D800E7669B /* Preview Assets.xcassets */; };
+		A7AFDE072BD116D800E7669B /* HueLightsVoiceControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFDE062BD116D800E7669B /* HueLightsVoiceControlTests.swift */; };
+		A7AFDE112BD116D800E7669B /* HueLightsVoiceControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFDE102BD116D800E7669B /* HueLightsVoiceControlUITests.swift */; };
+		A7AFDE132BD116D800E7669B /* HueLightsVoiceControlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFDE122BD116D800E7669B /* HueLightsVoiceControlUITestsLaunchTests.swift */; };
+		A7AFDE202BD118C600E7669B /* HueBridgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFDE1F2BD118C600E7669B /* HueBridgeViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7AFDE032BD116D800E7669B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7AFDDEA2BD116D700E7669B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7AFDDF12BD116D700E7669B;
+			remoteInfo = HueLightsVoiceControl;
+		};
+		A7AFDE0D2BD116D800E7669B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7AFDDEA2BD116D700E7669B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7AFDDF12BD116D700E7669B;
+			remoteInfo = HueLightsVoiceControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A7AFDDF22BD116D700E7669B /* HueLightsVoiceControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HueLightsVoiceControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AFDDF52BD116D700E7669B /* HueLightsVoiceControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueLightsVoiceControlApp.swift; sourceTree = "<group>"; };
+		A7AFDDF72BD116D700E7669B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A7AFDDF92BD116D800E7669B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7AFDDFC2BD116D800E7669B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A7AFDE022BD116D800E7669B /* HueLightsVoiceControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueLightsVoiceControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AFDE062BD116D800E7669B /* HueLightsVoiceControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueLightsVoiceControlTests.swift; sourceTree = "<group>"; };
+		A7AFDE0C2BD116D800E7669B /* HueLightsVoiceControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueLightsVoiceControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AFDE102BD116D800E7669B /* HueLightsVoiceControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueLightsVoiceControlUITests.swift; sourceTree = "<group>"; };
+		A7AFDE122BD116D800E7669B /* HueLightsVoiceControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueLightsVoiceControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7AFDE1F2BD118C600E7669B /* HueBridgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueBridgeViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7AFDDEF2BD116D700E7669B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AFDDFF2BD116D800E7669B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AFDE092BD116D800E7669B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7AFDDE92BD116D700E7669B = {
+			isa = PBXGroup;
+			children = (
+				A7AFDDF42BD116D700E7669B /* HueLightsVoiceControl */,
+				A7AFDE052BD116D800E7669B /* HueLightsVoiceControlTests */,
+				A7AFDE0F2BD116D800E7669B /* HueLightsVoiceControlUITests */,
+				A7AFDDF32BD116D700E7669B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7AFDDF32BD116D700E7669B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7AFDDF22BD116D700E7669B /* HueLightsVoiceControl.app */,
+				A7AFDE022BD116D800E7669B /* HueLightsVoiceControlTests.xctest */,
+				A7AFDE0C2BD116D800E7669B /* HueLightsVoiceControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7AFDDF42BD116D700E7669B /* HueLightsVoiceControl */ = {
+			isa = PBXGroup;
+			children = (
+				A7AFDDF52BD116D700E7669B /* HueLightsVoiceControlApp.swift */,
+				A7AFDDF72BD116D700E7669B /* ContentView.swift */,
+				A7AFDDF92BD116D800E7669B /* Assets.xcassets */,
+				A7AFDDFB2BD116D800E7669B /* Preview Content */,
+				A7AFDE1F2BD118C600E7669B /* HueBridgeViewModel.swift */,
+			);
+			path = HueLightsVoiceControl;
+			sourceTree = "<group>";
+		};
+		A7AFDDFB2BD116D800E7669B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A7AFDDFC2BD116D800E7669B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A7AFDE052BD116D800E7669B /* HueLightsVoiceControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7AFDE062BD116D800E7669B /* HueLightsVoiceControlTests.swift */,
+			);
+			path = HueLightsVoiceControlTests;
+			sourceTree = "<group>";
+		};
+		A7AFDE0F2BD116D800E7669B /* HueLightsVoiceControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A7AFDE102BD116D800E7669B /* HueLightsVoiceControlUITests.swift */,
+				A7AFDE122BD116D800E7669B /* HueLightsVoiceControlUITestsLaunchTests.swift */,
+			);
+			path = HueLightsVoiceControlUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7AFDDF12BD116D700E7669B /* HueLightsVoiceControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AFDE162BD116D800E7669B /* Build configuration list for PBXNativeTarget "HueLightsVoiceControl" */;
+			buildPhases = (
+				A7AFDDEE2BD116D700E7669B /* Sources */,
+				A7AFDDEF2BD116D700E7669B /* Frameworks */,
+				A7AFDDF02BD116D700E7669B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HueLightsVoiceControl;
+			productName = HueLightsVoiceControl;
+			productReference = A7AFDDF22BD116D700E7669B /* HueLightsVoiceControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7AFDE012BD116D800E7669B /* HueLightsVoiceControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AFDE192BD116D800E7669B /* Build configuration list for PBXNativeTarget "HueLightsVoiceControlTests" */;
+			buildPhases = (
+				A7AFDDFE2BD116D800E7669B /* Sources */,
+				A7AFDDFF2BD116D800E7669B /* Frameworks */,
+				A7AFDE002BD116D800E7669B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7AFDE042BD116D800E7669B /* PBXTargetDependency */,
+			);
+			name = HueLightsVoiceControlTests;
+			productName = HueLightsVoiceControlTests;
+			productReference = A7AFDE022BD116D800E7669B /* HueLightsVoiceControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7AFDE0B2BD116D800E7669B /* HueLightsVoiceControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AFDE1C2BD116D800E7669B /* Build configuration list for PBXNativeTarget "HueLightsVoiceControlUITests" */;
+			buildPhases = (
+				A7AFDE082BD116D800E7669B /* Sources */,
+				A7AFDE092BD116D800E7669B /* Frameworks */,
+				A7AFDE0A2BD116D800E7669B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7AFDE0E2BD116D800E7669B /* PBXTargetDependency */,
+			);
+			name = HueLightsVoiceControlUITests;
+			productName = HueLightsVoiceControlUITests;
+			productReference = A7AFDE0C2BD116D800E7669B /* HueLightsVoiceControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7AFDDEA2BD116D700E7669B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A7AFDDF12BD116D700E7669B = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					A7AFDE012BD116D800E7669B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A7AFDDF12BD116D700E7669B;
+					};
+					A7AFDE0B2BD116D800E7669B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A7AFDDF12BD116D700E7669B;
+					};
+				};
+			};
+			buildConfigurationList = A7AFDDED2BD116D700E7669B /* Build configuration list for PBXProject "HueLightsVoiceControl" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7AFDDE92BD116D700E7669B;
+			productRefGroup = A7AFDDF32BD116D700E7669B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7AFDDF12BD116D700E7669B /* HueLightsVoiceControl */,
+				A7AFDE012BD116D800E7669B /* HueLightsVoiceControlTests */,
+				A7AFDE0B2BD116D800E7669B /* HueLightsVoiceControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7AFDDF02BD116D700E7669B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AFDDFD2BD116D800E7669B /* Preview Assets.xcassets in Resources */,
+				A7AFDDFA2BD116D800E7669B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AFDE002BD116D800E7669B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AFDE0A2BD116D800E7669B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7AFDDEE2BD116D700E7669B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AFDDF82BD116D700E7669B /* ContentView.swift in Sources */,
+				A7AFDDF62BD116D700E7669B /* HueLightsVoiceControlApp.swift in Sources */,
+				A7AFDE202BD118C600E7669B /* HueBridgeViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AFDDFE2BD116D800E7669B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AFDE072BD116D800E7669B /* HueLightsVoiceControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AFDE082BD116D800E7669B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AFDE112BD116D800E7669B /* HueLightsVoiceControlUITests.swift in Sources */,
+				A7AFDE132BD116D800E7669B /* HueLightsVoiceControlUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7AFDE042BD116D800E7669B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7AFDDF12BD116D700E7669B /* HueLightsVoiceControl */;
+			targetProxy = A7AFDE032BD116D800E7669B /* PBXContainerItemProxy */;
+		};
+		A7AFDE0E2BD116D800E7669B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7AFDDF12BD116D700E7669B /* HueLightsVoiceControl */;
+			targetProxy = A7AFDE0D2BD116D800E7669B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A7AFDE142BD116D800E7669B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7AFDE152BD116D800E7669B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7AFDE172BD116D800E7669B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HueLightsVoiceControl/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samuildimov.HueLightsVoiceControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7AFDE182BD116D800E7669B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HueLightsVoiceControl/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samuildimov.HueLightsVoiceControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A7AFDE1A2BD116D800E7669B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samuildimov.HueLightsVoiceControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HueLightsVoiceControl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HueLightsVoiceControl";
+			};
+			name = Debug;
+		};
+		A7AFDE1B2BD116D800E7669B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samuildimov.HueLightsVoiceControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HueLightsVoiceControl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HueLightsVoiceControl";
+			};
+			name = Release;
+		};
+		A7AFDE1D2BD116D800E7669B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samuildimov.HueLightsVoiceControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HueLightsVoiceControl;
+			};
+			name = Debug;
+		};
+		A7AFDE1E2BD116D800E7669B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samuildimov.HueLightsVoiceControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HueLightsVoiceControl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7AFDDED2BD116D700E7669B /* Build configuration list for PBXProject "HueLightsVoiceControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AFDE142BD116D800E7669B /* Debug */,
+				A7AFDE152BD116D800E7669B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7AFDE162BD116D800E7669B /* Build configuration list for PBXNativeTarget "HueLightsVoiceControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AFDE172BD116D800E7669B /* Debug */,
+				A7AFDE182BD116D800E7669B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7AFDE192BD116D800E7669B /* Build configuration list for PBXNativeTarget "HueLightsVoiceControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AFDE1A2BD116D800E7669B /* Debug */,
+				A7AFDE1B2BD116D800E7669B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7AFDE1C2BD116D800E7669B /* Build configuration list for PBXNativeTarget "HueLightsVoiceControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AFDE1D2BD116D800E7669B /* Debug */,
+				A7AFDE1E2BD116D800E7669B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7AFDDEA2BD116D700E7669B /* Project object */;
+}
