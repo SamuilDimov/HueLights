@@ -3,73 +3,152 @@ import Foundation
 class HueBridgeViewModel: ObservableObject {
     @Published var bridgeIP: String?
     @Published var username: String?
+    @Published var lights: [Light] = []
     @Published var authenticationError: String?
 
-    // Discover the Hue Bridge on the local network
     func discoverHueBridge() {
         let url = URL(string: "https://discovery.meethue.com/")!
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else {
+            guard let data = data else {
                 DispatchQueue.main.async {
-                    self.authenticationError = "Discovery error: \(error?.localizedDescription ?? "Unknown error")"
+                    self.authenticationError = error?.localizedDescription ?? "Unknown error"
                 }
                 return
             }
-            
-            DispatchQueue.main.async {
-                do {
-                    if let jsonArray = try JSONSerialization.jsonObject(with: data) as? [[String: Any]],
-                       let firstBridge = jsonArray.first,
-                       let internalIPAddress = firstBridge["internalipaddress"] as? String {
-                        self.bridgeIP = internalIPAddress
-                        print("Found bridge IP: \(internalIPAddress)")
-                    }
-                } catch {
-                    self.authenticationError = "JSON parsing error during discovery: \(error.localizedDescription)"
+            do {
+                let bridges = try JSONDecoder().decode([Bridge].self, from: data)
+                DispatchQueue.main.async {
+                    self.bridgeIP = bridges.first?.internalipaddress
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.authenticationError = "JSON decoding error: \(error)"
                 }
             }
         }
         task.resume()
     }
 
-    // Attempt to register a new user with the Hue Bridge
     func createUser(ipAddress: String) {
-        guard let url = URL(string: "http://\(ipAddress)/api") else {
-            DispatchQueue.main.async {
-                self.authenticationError = "Invalid URL for bridge."
-            }
-            return
-        }
+        let url = URL(string: "http://\(ipAddress)/api")!
+        let body = ["devicetype": "my_hue_app#ios"]
+        guard let requestBody = try? JSONEncoder().encode(body) else { return }
         
-        let requestBody = ["devicetype": "my_hue_app#swift_app"]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.httpBody = try? JSONSerialization.data(withJSONObject: requestBody, options: [])
+        request.httpBody = requestBody
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            DispatchQueue.main.async {
-                guard let data = data, error == nil else {
-                    self.authenticationError = "Network error during authentication: \(error?.localizedDescription ?? "Unknown error")"
-                    return
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    self.authenticationError = error?.localizedDescription ?? "Unknown error"
                 }
-                
-                do {
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]],
-                       let firstElement = json.first {
-                        
-                        if let success = firstElement["success"] as? [String: Any],
-                           let username = success["username"] as? String {
-                            self.username = username
-                        } else if let error = firstElement["error"] as? [String: Any],
-                                  let description = error["description"] as? String {
-                            self.authenticationError = description
-                        }
-                    }
-                } catch {
-                    self.authenticationError = "JSON parsing error during authentication: \(error.localizedDescription)"
+                return
+            }
+            do {
+                let result = try JSONDecoder().decode([CreateUserResponse].self, from: data)
+                DispatchQueue.main.async {
+                    self.username = result.first?.success?.username
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.authenticationError = "JSON decoding error: \(error)"
                 }
             }
         }
         task.resume()
     }
+
+    func fetchLights() {
+        guard let ipAddress = bridgeIP, let username = username else {
+            self.authenticationError = "No bridge IP or username"
+            return
+        }
+        let url = URL(string: "http://\(ipAddress)/api/\(username)/lights")!
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    self.authenticationError = error?.localizedDescription ?? "Unknown error"
+                }
+                return
+            }
+            do {
+                let lightsDictionary = try JSONDecoder().decode([String: Light].self, from: data)
+                DispatchQueue.main.async {
+                    self.lights = lightsDictionary.map { id, light in
+                        var lightCopy = light
+                        lightCopy.id = id
+                        return lightCopy
+                    }.sorted(by: { $0.id < $1.id })
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.authenticationError = "JSON decoding error: \(error)"
+                }
+            }
+        }
+        task.resume()
+    }
+
+    func setLightState(lightId: String, isOn: Bool, hue: Int? = nil, saturation: Int? = nil, brightness: Int? = nil) {
+        guard let ipAddress = bridgeIP, let username = username else {
+            self.authenticationError = "No bridge IP or username"
+            return
+        }
+        let url = URL(string: "http://\(ipAddress)/api/\(username)/lights/\(lightId)/state")!
+        var state: [String: Any] = ["on": isOn]
+        if let hue = hue {
+            state["hue"] = hue
+        }
+        if let saturation = saturation {
+            state["sat"] = saturation
+        }
+        if let brightness = brightness {
+            state["bri"] = brightness
+        }
+        
+        guard let requestBody = try? JSONSerialization.data(withJSONObject: state) else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.httpBody = requestBody
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.authenticationError = "Error setting light state: \(error.localizedDescription)"
+                }
+            }
+        }
+        task.resume()
+    }
+}
+
+struct Bridge: Codable {
+    let id: String
+    let internalipaddress: String
+}
+
+struct CreateUserResponse: Codable {
+    struct Success: Codable {
+        let username: String
+    }
+    let success: Success?
+}
+
+struct Light: Identifiable, Codable {
+    var id: String
+    var name: String
+    var state: LightState
+}
+
+struct LightState: Codable {
+    var on: Bool
+    var bri: Int
+    var hue: Int?
+    var sat: Int?
 }
