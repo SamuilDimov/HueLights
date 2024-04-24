@@ -33,7 +33,7 @@ struct ContentView: View {
                         Text(light.state.on ? "On" : "Off")
                         Circle()
                             .fill(light.state.on ? Color.green : Color.gray)
-                            .frame(width: 20, height: 20)
+                            .frame(width: 20)
                     }
                 }
 

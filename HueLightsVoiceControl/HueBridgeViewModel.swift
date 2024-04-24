@@ -99,6 +99,10 @@ class HueBridgeViewModel: ObservableObject {
             if let error = error {
                 DispatchQueue.main.async { self.authenticationError = "Error setting light state: \(error.localizedDescription)" }
             }
+            DispatchQueue.main.async {
+                self.stopVoiceControl()
+                self.startVoiceControl()
+            }
         }.resume()
     }
 
@@ -151,7 +155,7 @@ class HueBridgeViewModel: ObservableObject {
             let newState = LightState(on: false, bri: 254, hue: lights[0].state.hue, sat: lights[0].state.sat)
             setLightState(lightId: lights[0].id, state: newState)
         } else if command.contains("turn red") {
-            let newState = LightState(on: true, bri: 254, hue: 0, sat: 254)
+            let newState = LightState(on: true, bri: 254, hue: 65280, sat: 254)
             setLightState(lightId: lights[0].id, state: newState)
         } else if command.contains("turn blue") {
             let newState = LightState(on: true, bri: 254, hue: 46920, sat: 254)
