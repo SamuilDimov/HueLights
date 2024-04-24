@@ -46,6 +46,7 @@
 		A7AFDE102BD116D800E7669B /* HueLightsVoiceControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueLightsVoiceControlUITests.swift; sourceTree = "<group>"; };
 		A7AFDE122BD116D800E7669B /* HueLightsVoiceControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueLightsVoiceControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A7AFDE1F2BD118C600E7669B /* HueBridgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueBridgeViewModel.swift; sourceTree = "<group>"; };
+		A7AFDE212BD952FA00E7669B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 		A7AFDDF42BD116D700E7669B /* HueLightsVoiceControl */ = {
 			isa = PBXGroup;
 			children = (
+				A7AFDE212BD952FA00E7669B /* Info.plist */,
 				A7AFDDF52BD116D700E7669B /* HueLightsVoiceControlApp.swift */,
 				A7AFDDF72BD116D700E7669B /* ContentView.swift */,
 				A7AFDDF92BD116D800E7669B /* Assets.xcassets */,
@@ -426,8 +428,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HueLightsVoiceControl/Preview Content\"";
+				DEVELOPMENT_TEAM = 3YV6L6D8MG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HueLightsVoiceControl/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to control lights with voice commands.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Voice control for lights";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -455,8 +461,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HueLightsVoiceControl/Preview Content\"";
+				DEVELOPMENT_TEAM = 3YV6L6D8MG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HueLightsVoiceControl/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to control lights with voice commands.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Voice control for lights";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
